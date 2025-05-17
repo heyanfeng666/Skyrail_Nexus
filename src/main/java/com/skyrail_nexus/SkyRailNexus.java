@@ -1,5 +1,7 @@
 package com.skyrail_nexus;
 
+import com.skyrail_nexus.register.ModBlocks;
+import com.skyrail_nexus.register.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +20,9 @@ public class SkyRailNexus implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		ModItems.init();
+		ModBlocks.init();
 
 		LOGGER.info("Hello Fabric world!");
 	}
